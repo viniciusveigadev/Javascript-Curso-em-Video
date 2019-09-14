@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introdução ao DOM</title>
+</head>
+<style>
+    p#p2 {
+        color: blue;
+    }
+</style>
+
+<body>
+    <p>Este é o <strong>primeiro</strong> parágrafo</p>
+    <p id="p2">Este é o segundo parágrafo</p>
+    <h1 class="minhaClasse">Este é um h1</h1>
+    <h1 name="msg">Este é o segundo h1</h1>
+    <h2>Este é um h2</h2>
+</body>
+<script>
+    var escolha = confirm("Deseja ver do que o javascript sozinho é capaz de fazer? ");
+    if (escolha) {
+        var parágrafo1 = document.getElementsByTagName('p')[0];
+        //Em '' é a tag. Em [] a posição dela
+        document.writeln(parágrafo1.innerHTML);
+        //o innerHTML pega o css e tudo que estiver dentro.  
+        document.writeln(parágrafo1.innerText);
+        //o innerText pega apenas o texto. 
+
+        var corpo = document.body;
+        //Variável corpo recebeu body
+        corpo.style.background = 'green';
+        //Variável corpo recebeu uma nova cor de fundo
+
+        var alterandoTextoPorClass = document.getElementsByClassName('minhaClasse')[0];
+        //Observe que quanto getElements esta no plural temos que informar o array
+        alterandoTextoPorClass.innerText = 'h1 foi alterado com getElementByClassName';
+
+        var alterandoPorName = document.getElementsByName('msg')[0];
+        alterandoPorName.innerText = 'h1 foi alterado pelo getElementByName';
+
+        //Modo atual e recomendado usando querySelector
+        document.querySelector('.p2'); //por id
+        document.querySelector('h1#minhaClasse'); //por class
+        document.querySelector('h2').style.color = 'pink'; //alterando numa única linha. 
+        var alterandoh2 = document.querySelector('h2');
+        alterandoh2.innerText = 'h2 alterado usando querySelector';
+    } else {
+        //escolha recebe undefined
+    }
+
+</script>
+
+</html>

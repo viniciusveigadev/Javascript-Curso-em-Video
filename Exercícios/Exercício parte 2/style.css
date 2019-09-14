@@ -1,0 +1,160 @@
+/* Body */
+
+body {
+    font-family: cursive, 'Times New Roman', serif;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Container */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    /*50% da tela em dispositivos de tela grande*/
+    grid-template-columns: 50%;
+    /*tamnho que cada liha ocupará*/
+    grid-template-rows: 20vh 70vh 10vh;
+    justify-content: center;
+    transition: ease-in 0.3s;
+}
+
+/* Container vai ocupar 90% da tela em dispositivos de tela menor que 899px*/
+
+@media screen and (max-width:899px) {
+    .container {
+        grid-template-columns: 90%;
+    }
+}
+
+/* .container>header {} */
+
+.container>main {
+    background-color: rgb(197, 192, 192);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.253);
+}
+
+#fotos {
+    margin: 5% 0;
+}
+
+@media screen and (max-height: 525px) {
+    #fotos {
+        width: 12rem;
+        margin: 0 auto;
+    }
+}
+
+/* .container>footer {} */
+
+div {
+    text-align: center;
+}
+
+div#msg {
+    padding: 30px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cores de fundo*/
+
+.cor-dia {
+    background-color: #3468d9;
+}
+
+.cor-tarde {
+    background-color: #786fc5ad;
+}
+
+.cor-noite {
+    background-color: #1b3d52;
+}
+
+/* gradient */
+
+.gradient-dia {
+    background-image: linear-gradient(20deg, #3468d9, rgb(126, 173, 201), transparent);
+}
+
+.gradient-tarde {
+    background-image: linear-gradient(20deg, #786fc5ad, rgb(238, 185, 222), transparent);
+}
+
+.gradient-noite {
+    background-image: linear-gradient(20deg, rgb(23, 26, 43), #1d638f, transparent);
+}
+
+/* Typewritter Efect */
+
+/* DEMO-SPECIFIC STYLES */
+
+.typewriter h3 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: white
+    }
+}
+
+/* Flashing */
+
+.hover13 img#imagem:hover {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}

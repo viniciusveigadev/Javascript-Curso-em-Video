@@ -1,0 +1,50 @@
+<!--https://developer.mozilla.org/en-US/docs/Web/Events-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+</head>
+<style>
+    div#caixa{
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 200px;
+        color: white;
+    }
+</style>
+<body>
+    <div id=caixa onclick="clicar()"> 
+        <!--onmouseout="sair()" onmouseenter="entrar()" 
+        eventos removidos para exemplificar uso do addEventListener que é o mais recente-->
+        Interaja...
+    </div>
+</body>
+
+<script>
+
+    var box = document.querySelector('div#caixa'); 
+    box.addEventListener('mouseout', sair); //Repare que usamos a forma mais recente de escrever o evento
+    box.addEventListener('mouseenter', entrar); //Novamente! Era onmouseenter e agora só mouseenter
+
+    function clicar(){
+        box.innerText = 'Clicou';
+        box.style.background = 'pink';
+    }
+    function sair(){
+        box.innerText = 'Saiu';
+    }
+    function entrar(){
+        box.innerText = 'Entrou';
+        box.style.background = 'green'
+    }
+
+</script>
+
+</html>

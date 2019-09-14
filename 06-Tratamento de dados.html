@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso em vídeo - Javascript</title>
+</head>
+
+<body>
+    <h1>Tópicos da aula Nª 06</h1>
+</body>
+
+<script>
+
+    var nome = window.prompt("Qual o seu nome?");
+    //Pega o valor inserido
+
+    window.alert(`Bem vindo ${nome}`);
+    //Mostra mensagem. Usa novo padão ecmaScript ${} entre crase ``. Usado para "concatenar"
+
+    var n1 = Number.parseInt(window.prompt("Digite o primeiro valor de investimento nª"));
+    //Perceba que o prompt recebe valores em strings. Use Number() para converter para números inteiros ou reais
+
+    var n2 = Number.parseInt(window.prompt("Digite o segundo valor de investimento nª"));
+    //Number.parseInt() converte para número o que estava vindo como string
+
+    var soma = n1 + n2;
+
+    soma.toFixed(2).replace('.', ',');
+    //.toFixed() para qntd de numeros depois do ponto
+    //.replace('.', ',') para trocar ponto para por vírgula
+
+    soma.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    //Mude o BRL para a moeda que deseja apresentar. Ex. USD, EUR...
+
+    alert(`O resultado da soma dos dois números é: ${soma}`);
+    //Repare que o método alert/prompt e outros funcionam sem window na frente
+
+    document.writeln(`Saldo: ${soma} <br/>`);
+
+    document.write(`Seu nome tem <strong> ${nome.length} </strong> letras <br/>`);
+    //Escreve no html. nome.lenght lê a quantidade de letras. 
+
+    document.write(`Seu nome em maiúsculo: ${nome.toUpperCase()}`);
+    //nome.toLowerCase() transforma em minúsculo
+
+    //Abaixo um pequeno uso do confirm ou window.confirm
+    var escolhaDoUsuario = confirm("Confirma que todos os dados foram informados corretamente?");
+
+    //Se clicou em ok, então: escolhaDoUsuario recebeu TRUE
+    if (escolhaDoUsuario) {
+        alert("Obrigado");
+    } else {
+        alert("Reinicie a página e insira novamente!");
+    }
+</script>
+
+</html>
