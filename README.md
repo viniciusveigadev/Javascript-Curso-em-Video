@@ -3,7 +3,7 @@ Curso de JS básico
 
 | Projetos | Sites |
 | ------ | ------ |
-| Hora do dia | [https://hora-do-dia.netlify.app/][PlDb] |
-| Verificador de idade | [https://verificador-de-idade.netlify.app/][PlGh] |
-| Vamos contar? | [https://vamos-contar.netlify.app/][PlGd] |
-| Tabuada fácil | [https://tabuada-facil.netlify.app/][PlOd] |
+| Hora do dia | [https://hora-do-dia.netlify.app/]|
+| Verificador de idade | [https://verificador-de-idade.netlify.app/] |
+| Vamos contar? | [https://vamos-contar.netlify.app/]|
+| Tabuada fácil | [https://tabuada-facil.netlify.app/] |
