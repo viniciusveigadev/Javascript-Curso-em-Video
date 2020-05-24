@@ -15,14 +15,13 @@ body {
     display: grid;
     /*50% da tela em dispositivos de tela grande*/
     grid-template-columns: 50%;
-    /*tamnho que cada liha ocupará*/
+    /*tamanho que cada linha ocupará*/
     grid-template-rows: 20vh 70vh 10vh;
     justify-content: center;
     transition: ease-in 0.3s;
 }
 
 /* Container vai ocupar 90% da tela em dispositivos de tela menor que 899px*/
-
 @media screen and (max-width:899px) {
     .container {
         grid-template-columns: 90%;
@@ -56,6 +55,8 @@ div {
 
 div#msg {
     padding: 30px 0;
+    width: 200px;
+    margin: auto;
 }
 
 img {
